@@ -1,0 +1,550 @@
+companyrecno,Abbrevation,CompanyName
+29,MbPT,Mumbai Port Trust
+37,SMC,Surat Municipal Corporation
+45,ADE,Aeronautical Development Establishment
+70,NITIE,NITIE
+72,GDA,Ghaziabad Development Authority
+89,MCI,Medical Council Of India
+128,MEDA,Maharashtra Energy Development Agency
+166,"NLCIL
+NLC India Limited",Neyveli Lignite Corporation Limited
+258,"CPCL - Chennai Petroleum Corporation Limited
+MRL",Madras Refineries Limited
+303,APBCL,Andhra Pradesh Beverages Corporation Limited
+305,MFL,Madras Fertilizers Limited
+317,DTC,Delhi Transport Corporation
+328,DSIIDC,Delhi State Industrial Development Corporation Limited
+331,KNIT,Kamla Nehru Institute Of Technology
+411,RDSO,Research Designs And Standards Organisation
+448,KEPIP,Kinfra Export Promotion Industrial Parks Limited
+466,CISH,Central Institute For Subtropical Horticulture
+491,NSIT,Netaji Subhas Institute of Technology
+552,,National Institute Of Agricultural Extension Management
+619,MSAMB ,Maharashtra State Agriculture Marketing Board
+673,"RESCO
+KRECS",Kuppam Rural Electric Co-op Society Limited (The)
+761,GUDA ,Gandhinagar Urban Development Authority
+774,COC,Corporation Of Chennai
+810,STQC,Standardisation Testing And Quality Certification Dirctorate
+821,KSCDC,Kerala State Cashew Development Corporation Limited (The)
+845,TTD,Tirumala Tirupati Devasthanams
+882,"CRRI
+CSIR",Central Road Research Institute
+974,LEOS,Laboratory For Eleectro Optic Systems
+992,EdCIL,Educational Consultants India Limited
+1069,TAMIN,Tamil Nadu Minerals Limited
+1086,DMRC,Delhi Metro Rail Corporation Limited
+1090,GCF,Gun Carriage Factory
+1091,CRECSCL,Cheepurupalli Rural Electric Co-operative Society Limited (The)
+1118,HRBC,Hooghly River Bridge Commissioners
+1122,OFB,Ordnance Cable Factory
+1124,"GGSIPU
+IPU",Guru Gobind Singh Indraprastha University
+1125,KMC,Calcutta Municipal Corporation (The)
+1150,DU,University Of Delhi
+1155,HVF,Heavy Vehicles Factory
+1166,CAPE,Co-operative Academy Of Professional Education Society
+1223,IRCOT,Indian Railways Central Organisation For Telecom
+1228,,Central Organisation Railway Electrification
+1240,CIRT,Central Institute Of Road Transport
+1261,ISTM,Institute Of Secretariat Training And Management
+1283,TNMSC,Tamil Nadu Medical Services Corporation Limited
+1293,APTS,Andhra Pradesh Technology Services Limited
+1313,HCL,Haladia Petrochemicals Limited
+1323,ICSI,Institute Of Company Secretaries Of India (The)
+1332,CSL,Cochin Shipyard Limited
+1354,ICAI,Institute Of Chartered Accountants Of India [ The]
+1388,SLIET,Sant Longowal Institute Of Engineering And Technology
+1411,PMC,Patna Municipal Corporation
+1453,MCD,Municipal Corporation Of Delhi
+1468,UNMICRC,U N Mehta Institute Of Cardiology And Research Centre
+1484,ASRTU,Association Of State Road Transport Undertakings
+1510,NCT,Government Of National Capital Territory Of New Delhi
+1535,"NTCL
+NTC",National Textile Corporation (u.p.) Limited
+1540,UPLDB,Uttar Pradesh Live Stock Development Board
+1577,DMC,Durgapur Municipal Corporation
+1593,"KR
+CRL",Cochin Refineries Limited
+1608,DDA,Delhi Development Authority
+1631,JNPT,Jawaharlal Nehru Port Trust
+1705,"SGPGIMS
+SGPGI",Sanjay Gandhi Post Graduate Institute Of Medical Science
+1711,KMF,Karnataka Co.Operative Milk Producers Federation Limited
+1715,NSTL,Naval Science And Technological Laboratory
+1717,DCW,Diesel Component Works
+1719,"NIHSAD
+HSADL",High Security Animal Disease Laboratory
+1788,NMC,Nagpur Municipal Corporation
+1800,TANSI,Tamil Nadu Small Industries Corporation Limited
+1815,LDCE,L D College Of Engineering
+1839,DVB,Delhi Vidyut Board
+1859,vizagport,Visakhapatnam Port Trust
+1898,CMWSSB,Chennai Metropolitan Water Supply And Sewerage Board
+1904,BMHRC,Bhopal Memorial Hospital And  Research Centre
+1917,CIMFR,Central Mining Research Institute
+1980,GACL,Gujarat Alkalies And Chemicals Limited
+1987,YMCA,Young Man Christian Association
+2015,CTC,Calcutta Tramways Company Limited (The)
+2017,AFRI,Arid Forest Research Institute
+2051,VMC,Vadodara Muncipal Corporation
+2100,MAIDC,Maharashtra Agro Industries Development Corporation Limited [ The]
+2132,VRDE,Vehicles Research And Development Establishment
+2158,"CMET
+C-MET",Centre For Materials For Electronics Technology
+2170,EQDC,Electronics And Quality Development Centre
+2217,BPC,Bharat Pumps And Compressors Limited
+2219,FCIL,Fertilizer Corporation Of India Limited [ The]
+2294,IIVR,Indian Institute Of Vegetable Research
+2324,PWPCTRF,Pali Water Pollution Control Treatment And Research Foundation
+2374,SGGS,Shri Guru Gobind Singhji College Of Engineering And Technology
+2391,GSEB,Gujarat Secondary Education Board
+2411,NIMHANS,National Institute Of Mental Health And Neuro Sciences
+2415,BTPS,Barauni Thermal Power Station
+2445,DTU,Delhi College Of Engineering
+2458,KDMT,Kalyan Dombivli Municipal Transport Undertaking
+2482,GIL,Gujarat Informatics Limited
+2506,MGL,Mahanagar Gas Limited
+2524,CCMC,Municipal Corporation Of Coimbatore
+2543,NAL,National Aerospace Laboratories
+2544,TAHDCO,Tamil Nadu Adi Dravidar Housing And Development Corporation Limited
+2555,NGRI,National Geophysical Research Institute
+2571,ASAMB,Assam State Agricultural Marketing Board
+2578,UPSCIDC,Uttar Pradesh Samaj Kalyan Nirman Nigam Limited
+2585,VMC,Municipal Corporation Of Vijayawada
+2625,TAMPCOL,Tamil Nadu Medicinal Plant Farms And Herbal Medicine Corporation Limited
+2635,DTTDC,Delhi Tourism And Transportation Development Corporation Limited
+2642,GTBH,Guru Tegh Bahadur Hospital
+2650,BIBCOL,Bharat Immunologicals And  Biologicals Corporation Limited
+2673,TMT,Thane Municipal Transport (The)
+2710,FSC,Field Studies Circle
+2724,CIDCO,City And Industrial Development Corporation Limited
+2759,CDRI,Central Drug Research Institute
+2776,PFC,Power Finance Corporation Limited
+2821,HNL,Hindustan Newsprint Limited
+2837,TEDA,Tamil Nadu Energy Development Agency
+2880,CEIL,Cairn Energy India Pty Limited
+2913,DEAL,Defence Electronics Applications Laboratory
+2952,BDA,Bhubaneswar Development Authority
+2960,PMC,Pune Municipal Corporation
+2989,RLDB,Rajasthan Livestock Development Board
+3003,KILA,Kerala Institute Of Local Administration
+3013,GSITI,Geological Survey Of India Training Institute
+3015,IMC,Indore Municipal Corporation
+3025,NPCC ,National Projects Construction Limited
+3028,CATS,Centralised Accident And Trauma Services (C A T S)
+3037,,Durgapur Projects Limited [The]
+3045,GTRE,Gas Turbine Research Establishment
+3069,THDC,Tata Housing Development Company Limited
+3109,BRO,Directorate General Border Roads
+3135,KESCO,Kanpur Electricity Supply Co. Limited
+3146,MMRDA,Mumbai Metropolitan Region Development Authority
+3148,,Brihan Mumbai Electric Supply And Transport Undertaking
+3151,NCAOR,National Centre For Antarctic And Ocean Research
+3167,JIPMER ,Jawaharlal Institute Of Post Graduate Medical Education And Research
+3172,CRRI,Central Rice Research Institute
+3177,,A P W D
+3189,CPT,Cochin Port Trust
+3194,DSE,Delhi Stock Exchange Association Limited (The)
+3199,GCGSCL,Greater Calcutta Gas Supply Corporation Limited
+3220,ARIAS,Assam Rural Infrastructure And Agricultural Service Project
+3221,BSE,Stock Exchange Mumbai (the)
+3227,ABB,Asea Brown Boveri Limited
+3240,CIFT,Central Institute Of Fisheries Technology
+3262,TRAI,Telecom Regulatory Authority Of India
+3264,LDA,Lucknow Development Authority
+3267,NMMT,Navi Mumbai Municipal Transport Undertaking
+3298,NPOL,Naval Physical And Oceanographic Laboratory
+3306,DFC,Delhi Financial Corporation
+3336,KSWC,Karnataka State Warehousing Corporation
+3348,MFPFED ,Madhya Pradesh State Minor Forest Produce Cooperative Federation
+3353,GSEC ,Gujarat State Export Corporation Limited
+3371,TNUIFSL,Tamil Nadu Urban Infrastructure Financial Services Limited
+3375,ICDS,Integrated Child Development Programme Office
+3387,APVVP ,Andhra Pradesh Vaidya Vidhana Parishad
+3398,OTDC,Orissa Tourism Development Corporation Limited
+3404,NRCRM,National Research Centre On Rapeseed Mustard
+3405,KRIBHCO ,Krishak Bharati Co-operative Limited
+3409,DSCSC,Delhi State Civil Supplies Corporation Limited
+3418,PSIEC,Punjab State Industrial Development Corporation Limited
+3430,KSHB,Kerala State Housing Board
+3443,RUDA,Rajkot Urban Development Authority
+3444,MALCO ,Madras Aluminium Company Limited [ The]
+3452,PEDA,Punjab Renewable Energy Development And Power Generation Company Limited
+3476,NIO,National Institute Of Oceanography
+3480,"MNREC
+MNNIT ",Motilal Nehru Regional Engineering College
+3482,RBDC,Roads And Bridges Development Corporation Of Kerala Limited
+3483,SWACH,Sanitation Water And Community Health Project
+3502,GVMC,Municipal Corporation Visakhapatnam
+3516,IMSC,Institute Of Mathematical Sciences (The)
+3535,NIRRH,Institute For Research In Reproduction
+3563,NIIH,Institute Of Immunohaematology
+3581,NMMC,Navi Mumbai Municipal Corporation
+3620,TNKVIB,Tamil Nadu Khadi And Village Industries Board
+3634,MIDHANI,Mishra Dhatu Nigam Limited
+3641,ELCOT,Electronics Corporation Of Tamil Nadu Limited
+3655,CSIO,Central Scientific Instruments Organisation
+3671,JDA,Jaipur Development Authority
+3685,VJTI,Veermata Jijabai Technological Institute
+3692,CIAE,Central Institute Of Agricultural Engineering
+3695,MSERC,Meghalaya State Electricity Board
+3697,APLDA,Andhra Pradesh Livestock Development Agency
+3700,APTDC,Andhra Pradesh Tourism Development Corporation Limited
+3715,NID,National Institute Of Design
+3720,CECRI,Central Electrochemical Research Institute
+3729,,Manganese Ore India Limited
+3734,PESU,Patna Electric Supply Undertaking
+3738,RAJFED,Rajasthan State Cooperative Marketing Federation Limited
+3740,RSICL,Rajasthan Small Scale Industries Corporation Limited (The)
+3741,AIDC,Assam Industrial Development Corporation Limited
+3742,RLDB,Rajasthan State Agriculture Development Board
+3752,BDA,Bangalore Development Authority
+3764,SAAP,Sports Authority Of Andhra Pradesh
+3770,NIFFT,National Institute Of Foundry And Forge Technology
+3801,RDPL,Rajasthan Drugs And Pharmaceuticals Limited
+3812,VTU ,Visveswaraih Technological University
+3824,NIESBUD,Uttar Pradesh Business Development Department
+3830,HAD,Haldia Development Authority
+3851,ACASH,Association Of Corporations And Apex Societies Of Handlooms
+3865,CVRDE,Combat Vehicles Research And Development Establishment
+3877,IWST,Institute Of Wood Science And Technology
+3878,BSEDC,Bihar State Electronics Development Corporation Limited
+3884,NIB,National Institute Of Biologicals
+3897,NIN,National Institute Of Nutrition
+3900,SPCE,Sardar Patel College Of Engineering
+3917,KDA,Kanpur Development Board
+3933,IMTECH,Institute Of Microbial Technology
+3943,DMRL,Defence Metallurgical Research Laboratory
+3951,IIP,Indian Institute Of Petroleum
+3955,GCRI,Gujarat Cancer And Research Institute [ The]
+3964,KSINC,Kerala Shipping And Inland Navigation Corporation Limited
+3979,MTDC,Manipur Tribal Development Corporation Limited
+3991,NSD,National School Of Drama
+3999,IIPA,Indian Institute Of Public Administration
+4001,SDKSSKN,Shree Doodhaganga Krishna Sahakari Sakkare Karkhane Niyamit
+4007,CIMFR,Central Fuel Research Institute
+16,,New Delhi Municipal Council
+24,,Maharashtra State Bureau Of Textbook Production  And Curriculum Research
+64,,Sher-i-kashmir Institute Of Medical Science
+84,,Central Duck Breeding Farm
+100,,Mrudagiri Sahakari Sakkare Karkhane Niyamit
+101,,Bus Route Road Department
+124,,Haryana Agro Industries Corporation Limited
+135,,Andhra Pradesh Irrigation Circle
+141,,Institute For Plasma Research
+241,,Marshal Super Soft Technolog Limited
+252,,Panipat Thermal Power Station
+253,,Gurgaon Agra Canal Command Lining Division
+272,,"Directorate Of Medical, Health And Family Welfare Services"
+283,,Siwani Water Services Division Bhiwani
+285,,Balasore Irrigation Division
+302,,Delhi Jal Board
+315,,Capital Project Circle
+316,,Himachal Pradesh State Government
+320,,Bihar State Forest Development Corporation Limited
+321,,Jilla Panchayat (r And B)
+322,,Tata Memorial Hospital
+326,,Samrat Ashok Technological Institute
+338,,Mumbai Building Repair And Reconstruction Board
+397,,National Institute Of Occupational Health
+403,,Uttar Pradesh State Aids Control Society
+405,,Machhannala Project Division
+432,,Nadiad Nagarpalika
+433,,Office Of The Group Commander
+468,,Punjab And Haryana Civil Secretariat
+469,,Office Of The Chief Commissioner Of Income Tax
+506,,Wheel And Axle Plant
+509,,Machine Tool Prototype Factory
+520,,Office Of The Central Excise And Customs
+535,,Bharuch Eco-Aqua Infrastructure Limited
+538,,Uttar Pradesh Forestry Project
+539,,Integral Coach Factory
+553,,Electricity O P Division
+570,,Salem District Co- Op. Milk Producers Union Limited (The)
+573,,Andhra Pradesh Foods
+618,,Uttar Pradesh Co.operative Sugar Factories Federation Limited
+649,,Chhata Sugar Company Limited
+654,,Office Of Commissioner Commercial Taxes
+656,,Mehta Research Institute Of Mathematics And Mathematical Physics (The)
+663,,Assam Gas Company Limited
+682,,Ahmedabad Cantonment Board
+683,,Gujarat Council Of Primary Education
+697,,Dishergarh Power Supply Company Limited
+699,,Kovur Coop.Sugar Factory Limited (The)
+704,,Kerala State Construction Corporation Limited
+741,,Opto Electronics Factory
+743,,Field Gun Factory
+758,,Karnataka State AIDS Prevention Society
+759,,Kerala State Civil Supplies Corporation Limited
+787,,Chhukha Hydro Power Corporation
+792,,Office Of The joint Assistant Director
+806,,Directorate General B S F
+817,,Jessop And Co. Limited
+823,,Rajkot Municipal Corporation
+849,,Punjab Government
+853,,Himatnagar Irrigation Division
+867,,Ordnance Parachute Factory
+872,,Himalayan Forest Research Institute
+875,,Punjab Tourism Development Corporation Limited
+899,,Thandava Co-operative Sugars Limited (The)
+928,,Tamil Nadu Co.operative Sugar Federation Limited
+932,,Hyderabad Metropolitan Water Supply And Sewerage Board
+950,,Chennai Port Trust
+963,,Solapur Telecom
+986,,Surat Peoples Co.operative Bank Limited  [ The]
+1012,,Presidents Secretatiat
+1027,,Madras Dock Labour Board
+1029,,Ford India Limited
+1030,,Sahakari Kitnashak Dawai Factory
+1052,,Mother Dairy Fruit And Vegetable Private Limited
+1058,,Latur Telecom District
+1059,,Director Of Lotteries
+1071,,Department Of Medical Education And Research Chandigarh Administration
+1096,,Dirtectorate General CRPF
+1101,,Co-operative Electric Supply Society Limited (The )
+1158,,Sir J J Group Of Hospital And Grant Medical College
+1165,,Karnataka Integrated Rural Water Supply
+1189,,Anglo French Textiles
+1196,,West Bengal Telecom
+1208,,L R S Institute Of Tuberculosis And Allied Diseases
+1233,,Niko Resources Limited
+1280,,Madhya Pradesh Rajya Sahakari Bank Maryadit
+1287,,Alcock Ashdown [ Gujarat] Limited
+1291,,Rajya Shabha Secretariat
+1312,,Kapri International Private Limited
+1339,,Industries Commissionerate And Cpo
+1361,,Rayachoty Rural Electric Supply Cooperative Society Limited (The)
+1384,,Banaskantha District Cooperative Milk Producers Union Limited
+1390,,Directorate Of Welfare Of Scheduled Castes And Backward Classes Punjab
+1396,,Haryana Seeds Development Corporation Limited
+1399,,Office Of The Police Telecommunication Organisation
+1407,,Chandigarh Electricity Department
+1470,,Chandigarh Administration Health Department
+1502,,India Nepal Joint Project Office
+1503,,PT B D Sharma Post Graduate Institute Of Medical Sciences
+1556,,Jodhpur Nagrik Sahakari Bank Limited
+1621,,High Explosives Factory
+1654,,Karnataka Tourism
+1655,,Jalgaon Municipal Council
+1660,,G M Hospital
+1662,,National Institute Of Science Communication
+1669,,Nandganj Sihori Sugar Company Limited
+1670,,Hotel Airport Ashok
+1697,,Aligarh Muslim University
+1698,,Municipal Corporation Of Ludhiana
+1714,,Defence Laboratory
+1732,,Dr Zakir Hussain Medical College
+1744,,Research And Medical Education Punjab
+1757,,Municipal Corporation Of Chandigarh
+1767,,Tenughat Thermal Power Station
+1789,,Gadag Co.operative Textile Mill Limited (the)
+1816,,Shahabad Co.operative Sugar Mills Limited
+1832,,Himachal Pradesh State Civil Supplies Corporation Limited
+1838,,Kurukshetra University
+1856,,Central Medical Stores Organisation
+1861,,Uttar Pradesh Bhumi Sudhar Nigam
+1887,,Division Of Agricultural Physics
+1889,,Bihar State Level Bankers Committee
+1899,,Jammu Kashmir Projects Construction Corporation Limited
+1908,,Central Frozen Semen Production And Training Institute
+1910,,Khuga Head Works Division
+1920,,AVCC Polytechnic
+1944,,Metal Handicrafts Service Centre
+1946,,Delhi Police
+1951,,Uttar Pradesh Police Educational Society
+1960,,Rifle Factory
+1974,,Security Printing Press
+1986,,G M And Associated Hospitals
+1994,,Tuticorin Port Trust
+1995,,Director Animal Husbandry
+1998,,Bechtel Hcc
+2000,,Air Force Central Accounts Office
+2005,,Pune Cantonment Board
+2016,,Metro Railway
+2032,,Lok Nayak Hospital
+2065,,H T L Limited
+2067,,Kerala State Coconut Development Corportaion Limited
+2096,,Yashwantrao Chavan Maharashtra Open University
+2114,,Chittor Co Operative Sugars Limited
+2119,,Ujjain Dugdha Sangh Sahakari Maryadit
+2122,,Grey Iron Foundry
+2130,,Department Of Information System And Administrative Reforms
+2157,,Bhopal Dugdha Sangh Sahakari Maryadit
+2171,,Ahmedabad Police Department
+2178,,Maharashtra State Police Housing And Welfare Corporation Limited
+2194,,S M G S Hospital
+2208,,Solid State Physics Laboratory
+2215,,Creative Arc
+2252,,West Bengal Small Industries Development Corporation Limited
+2259,,Janakalyan Sahakari Bank Limited
+2286,,Directorate Of College Education
+2290,,Public Health Institute
+2292,,Sawai Man Singh Hospital
+2302,,Satyawati College
+2339,,Municipal Corporation Of India
+2354,,Pandit Bhagwat Dayal Sharma Postgraduate Institute Of Medical Science
+2370,,Vasantdada Sugar Institute
+2372,,Indian Oil Employees Sahkari Awas Samati Limited
+2428,,Controller Of Printing And Stationery
+2438,,National Institute Of Rock Mechanics
+2443,,Central Equipment And Stores Procurement Organisation-l
+2449,,Indian Institute Of Remote Sensing
+2455,,State Ground Water Department
+2485,,Punjab State Forest Development Corporation Limited
+2494,,Bihar Plateau Development Project
+2512,,Erode District Cooperative Milk Producers Union Limited (The)
+2601,,Central Aviation Support Depot
+2614,,High Court Of Punjab And Haryana
+2629,,Aruna Asaf Ali Govt. Hospital
+2630,,Advance Systems Integration And Evaluation Organisation
+2647,,Calcutta Improvement Trust
+2653,,Gujarat State Drinking Water Infrastructure Co Limited
+2674,,Haryana State Federation Of Coop Sugar Mills Limited
+2698,,Sports Authority Of Gujarat
+2732,,Nuclear Science Centre
+2756,,Patratu Thermal Power Station
+2764,,Centre For Police Research
+2770,,Suratgarh Military Station
+2795,,Institute Of Rain And Moist Deciduous Forests Research
+2822,,Rane Brake Linings Limited
+2833,,Regional Cancer Centre
+2834,,Tirunelveli City Municipal Corporation
+2892,,Pondicherry Municipality
+2900,,Jaipur Municipal Corporation
+2918,,The Ahmedabad Electricity Company Limited
+2926,,Indian Institute Of Pulses Research
+2928,,Office Of The Comptroller And Auditor
+2934,,Multizone Lincs Private Limited
+2954,,Corporation Of Cochin
+2967,,Centaur Hotel (The)
+2969,,Nagpur Improvement Trust
+2970,,Safdarjang Hospital
+2977,,Malaviya Regional Engineering College
+2983,,Sardar Vallabhbhai Regional College Of Engg. And Tech.
+2992,,Directorate [ Medical ]
+2996,,Shivaji University
+3020,,Kerala State Co Operative Consumers Federation Limited
+3032,,Baroda Museum And Picture Gallery
+3036,,Punjab And Haryana High Court
+3038,,Tamil Nadu Textbook Corporation
+3040,,Kanha Vikas Nidhi
+3054,,Department Of Technical Education And Industrial Training
+3061,,Maulana Azad Medical College
+3064,,Western Naval Command
+3077,,Lok Sabha Secretariat
+3085,,Ambala Distt. Co-op Milk Producers Union Limited
+3086,,Agra College
+3087,,Uttar Pradesh State Tourism Development Corporation Limited
+3088,,Cimmco Birla Limited
+3093,,Ocean Gold C. H. S. Limited
+3103,,Punjab State Federation Of Cooperative Sugar Mills Limited
+3118,,Armoured Corps Centre And School
+3124,,Ropar District Cooperative Milk Producers Union Limited
+3125,,Chandigarh Administration Engineering Department
+3133,,Arignar Anna Sugar Mills
+3137,,Nepa Limited
+3141,,Salem Corporation
+3144,,Madurai Corporation
+3154,,Coimbatore Municipal Corporation
+3157,,Central Institute Of Tool Design
+3165,,Office Of The Resident Commissioner
+3171,,National Bal Bhavan
+3173,,Abhyudaya Cooperative Bank Limited
+3186,,Kerala Co-operative Milk Marketing Federation Limited
+3191,,Purulia Zilla Parishad
+3192,,Malegaon Sahakari Sakhar Karkhana Limited
+3203,,Gujarat State Board Of School Textbooks
+3231,,Goa Medical College
+3235,,Karnal Improvement Trust
+3250,,Palwal Co Op Sugar Mills Limited
+3252,,Hisar - Jind Co - Operative Milk Producers Union Limited
+3259,,Gujarat High Court
+3270,,Global Vipassana Foundation
+3287,,Forest And Plantation Development Corporation Limited
+3300,,Civil Secretariat Education Department
+3304,,Planning Commission
+3309,,R N T Medical College And Attached Hospitals
+3319,,Kasturba Polytechnic For Women
+3329,,Travancore Sugars And Chemicals Limited (The)
+3337,,Research Reference And Training Division
+3341,,State Aids Cell
+3363,,Centre For Biochemical Technology
+3365,,Small Arms Factory
+3366,,National Research Centre For Medical And Aromatic Plants
+3377,,Municipal Corporation Of Madurai
+3378,,Sri Padmavathi Mahila Visvavidyalayam
+3379,,Shivaji College
+3381,,Municipal Corporation Of Raipur
+3385,,Tidel Park Limited
+3396,,Dindigul Municipality
+3401,,Karur Municipality
+3402,,National Cooperative Sugar Mills Limited
+3411,,National Metallurgical Laboratory
+3412,,Coromandel Fertilisers Limited
+3415,,Tiruppur Municipality
+3433,,Central Bee Research And Training Institute
+3441,,Budhlada Cooperative Sugar Mills Limited
+3460,,Nakita Chemicals Limited
+3461,,Research Development And Quality Promotion
+3464,,Municipal Corporation Of Amritsar
+3468,,Jawahar Shetkari Sahakari Sakhar Karkhana Limited
+3473,,Visnagar Coop. Spinning Mill Limited
+3475,,Mohanlal Sukhadia University
+3481,,Tiruchirappalli City Corporation
+3484,,Chengalrayan Co.op. Sugar Mills Limited
+3506,,Delhi Agricultural Marketing Board
+3509,,Kolhapur Municipal Corporation
+3532,,Lady Hardinge Medical College And Associated Hospitals
+3536,,Nagapattinam Municipality
+3564,,Cordial Company
+3568,,Oriental Insurance Cooperative Housing Society Limited
+3588,,Salem City Municipal Corporation
+3589,,Currency Note Press
+3597,,Uttar Pradesh Cooperative Processing And Cold Storage Federation Limited
+3599,,Central Schools For Tibetians
+3607,,Directorate General Doordarshan
+3625,,Pune Housing And Area Development Board
+3646,,Kerala State Co-operative Coir Marketing Federation Limited
+3650,,Jamnagar Municipal Corporation
+3656,,Amravati University
+3670,,Kathivakkam Municipality
+3674,,Munshi Estate Co. Operative Housing Society Limited
+3676,,Korba Super Thermal Power Station
+3682,,Autokast Limited
+3693,,Kapasi Cooperative Housing Society Limited
+3708,,Rajasthan Energy Development Agency
+3711,,Tractebel Engineers And Constructors Pvt. Limited
+3716,,Office Of The Agriculture Engineer
+3724,,Central Projects And Development Organisation
+3725,,Kumbakonam Municipality
+3748,,Delhi Milk Scheme
+3759,VS HOSPITAL,Sheth Vadilal Sarabhai General Hospital
+3762,,Delhi Bureau Of Text Books
+3776,,Kutchh Jilla Agricultural Department
+3787,,Balaji Energy Private Limited
+3811,,Army Purchase Organisation
+3831,,Orissa Khadi And Village Industries Board
+3844,,Modi Spinning And Weaving Mills Co. Limited
+3856,,Sri Lanka High Commission
+3861,,Gujarat University
+3891,,Haryana Sugar Federation
+3895,,Kendrapara Expressway Division
+3896,,Urja Vihar Co-operative Group Housing Society
+3904,,Calicut Regional Engineering College
+3909,,Bhanjanagar Irrigation Division
+3912,,Nagarjuna Fertilizers And Chemicals Limited
+3913,,Birla Periclase
+3916,,Rajasthan State Bridge And Construction Company Limited
+3924,,Anna University
+3928,,Gokuldas Tejpal Hospital
+3946,,Kvaerner Cementation India Limited
+3958,,Gobichettipalayam Municipality
+3959,,Shikshana Prasaraka Mandli
+3961,,District Council Engineering Cell
+3970,,Terminal Ballistics Research Laboratory
+3986,,Orissa Hydel Power Balimela Limited
+3989,,Tamil Nadu Raffle Department
+3992,,Consulting Engineering Services [ India] Limited
+3997,,Rahuri Sahakari Sakhar Karkhana Limited
+4011,,Rural Technology Institute Gujarat
