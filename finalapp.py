@@ -1,9 +1,11 @@
 import streamlit as st
 import pandas as pd
 import re
-from nltk import WordNetLemmatizer
 from difflib import get_close_matches
 import streamlit as st
+import nltk
+nltk.download('wordnet')
+from nltk import WordNetLemmatizer
 # from spellchecker import SpellChecker
 
 # Load the data
