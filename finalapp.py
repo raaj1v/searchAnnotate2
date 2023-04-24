@@ -132,7 +132,7 @@ def search_keywords(input_text2):
                     # no match found in any column
                     wordNotFound.append(remaining_words.pop(0))
     # return keycodeids and corresponding phrases
-    return keyword_matches
+    return keyword_matches, wordNotFound
 
 
  #=====================================================================================================================================
