@@ -1,4 +1,4 @@
-# import streamlit as st
+import streamlit as st
 import pandas as pd
 import re
 from nltk import WordNetLemmatizer
@@ -167,7 +167,7 @@ def final(input_text):
 
 #=====================================================================================================================================
 
-st.title("TIGER AI")
+# st.title("TIGER AI")
 
 # Get user input
 input_text = st.text_input("Enter the search phrase:")
