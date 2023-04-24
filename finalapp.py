@@ -139,39 +139,71 @@ def search_keywords(input_text2):
 def final(input_text):
 
     lemm = WordNetLemmatizer()
-    # spell = SpellChecker()
     wordL = []
-    close_matches =[]
     A = search_keywords(input_text)
-    # print("A:==>",A)
-
     not_found_words = A[1]
     for word in not_found_words:
         wordlemmatized = lemm.lemmatize(word)
         wordL.append(wordlemmatized)
     wordL = ' '.join(wordL)
     B = search_keywords(wordL)
-    # print("B:==>",B)
-
     wordforCloseMatching = B[1]
-    # print("B(1)", B[1])
     getCloseMatch = []
     for i in wordforCloseMatching:
-        # print(i)
         c = get_close_matches(i, product_df['keyword'], n=2, cutoff=0.85)
         getCloseMatch.append(c)
         for items in getCloseMatch:
             getCloseMatch = [items for items in getCloseMatch if items is not None]
-    # print("getCloseMatch",getCloseMatch)    
-    # getCloseMatch = ' '.join(getCloseMatch)
     result = []
     for l in getCloseMatch:
         result += l
-    # print(result)
     brahmastra = ' '.join(result)
-    # print("brahmastra", brahmastra)
     D = search_keywords(brahmastra)
-    return A,B,D 
+    
+    # Extract the codes from the search results
+    code_A = [(p[0], p[1]) for p in A[0]]
+    code_B = [(p[0], p[1]) for p in B[0]]
+    code_D = [(p[0], p[1]) for p in D[0]]
+    
+    return (code_A, code_B, code_D)    
+#=====================================================================================================================================
+
+# def final(input_text):
+
+#     lemm = WordNetLemmatizer()
+#     # spell = SpellChecker()
+#     wordL = []
+#     close_matches =[]
+#     A = search_keywords(input_text)
+#     # print("A:==>",A)
+
+#     not_found_words = A[1]
+#     for word in not_found_words:
+#         wordlemmatized = lemm.lemmatize(word)
+#         wordL.append(wordlemmatized)
+#     wordL = ' '.join(wordL)
+#     B = search_keywords(wordL)
+#     # print("B:==>",B)
+
+#     wordforCloseMatching = B[1]
+#     # print("B(1)", B[1])
+#     getCloseMatch = []
+#     for i in wordforCloseMatching:
+#         # print(i)
+#         c = get_close_matches(i, product_df['keyword'], n=2, cutoff=0.85)
+#         getCloseMatch.append(c)
+#         for items in getCloseMatch:
+#             getCloseMatch = [items for items in getCloseMatch if items is not None]
+#     # print("getCloseMatch",getCloseMatch)    
+#     # getCloseMatch = ' '.join(getCloseMatch)
+#     result = []
+#     for l in getCloseMatch:
+#         result += l
+#     # print(result)
+#     brahmastra = ' '.join(result)
+#     # print("brahmastra", brahmastra)
+#     D = search_keywords(brahmastra)
+#     return A,B,D 
 
 #=====================================================================================================================================
 
