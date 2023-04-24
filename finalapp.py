@@ -209,7 +209,7 @@ def final(input_text):
 
 #=====================================================================================================================================
 
-st.title("TIGER AI")
+st.title("search Segmentation")
 
 # Get user input
 input_text = st.text_input("Enter the search phrase:")
