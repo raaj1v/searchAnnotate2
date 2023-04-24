@@ -158,7 +158,7 @@ def final(input_text):
     getCloseMatch = []
     for i in wordforCloseMatching:
         # print(i)
-        c = get_close_matches(i, product_df['keyword'], n=2, cutoff=0.8)
+        c = get_close_matches(i, product_df['keyword'], n=2, cutoff=0.85)
         getCloseMatch.append(c)
         for items in getCloseMatch:
             getCloseMatch = [items for items in getCloseMatch if items is not None]
