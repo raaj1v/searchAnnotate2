@@ -139,37 +139,37 @@ def search_keywords(input_text2):
 
 
  #=====================================================================================================================================
-def final(input_text):
+# def final(input_text):
 
-    lemm = WordNetLemmatizer()
-    wordL = []
-    A = search_keywords(input_text)
-    not_found_words = A[1]
-    for word in not_found_words:
-        wordlemmatized = lemm.lemmatize(word)
-        wordL.append(wordlemmatized)
-    wordL = ' '.join(wordL)
-    B = search_keywords(wordL)
-    wordforCloseMatching = B[1]
-    getCloseMatch = []
-    c = get_close_matches(i, product_df['keyword'], n=2)
-    first_letter = i[0].lower()
-    matches = [match for match in c if match.lower().startswith(first_letter)]
-    getCloseMatch.append(matches)
-    for items in getCloseMatch:
-        getCloseMatch = [items for items in getCloseMatch if items is not None]
-    result = []
-    for l in getCloseMatch:
-        result += l
-    brahmastra = ' '.join(result)
-    D = search_keywords(brahmastra)
+#     lemm = WordNetLemmatizer()
+#     wordL = []
+#     A = search_keywords(input_text)
+#     not_found_words = A[1]
+#     for word in not_found_words:
+#         wordlemmatized = lemm.lemmatize(word)
+#         wordL.append(wordlemmatized)
+#     wordL = ' '.join(wordL)
+#     B = search_keywords(wordL)
+#     wordforCloseMatching = B[1]
+#     getCloseMatch = []
+#     c = get_close_matches(i, product_df['keyword'], n=2)
+#     first_letter = i[0].lower()
+#     matches = [match for match in c if match.lower().startswith(first_letter)]
+#     getCloseMatch.append(matches)
+#     for items in getCloseMatch:
+#         getCloseMatch = [items for items in getCloseMatch if items is not None]
+#     result = []
+#     for l in getCloseMatch:
+#         result += l
+#     brahmastra = ' '.join(result)
+#     D = search_keywords(brahmastra)
     
-    # Extract the codes from the search results
-    code_A = [(p[0], p[1]) for p in A[0]]
-    code_B = [(p[0], p[1]) for p in B[0]]
-    code_D = [(p[0], p[1]) for p in D[0]]
+#     # Extract the codes from the search results
+#     code_A = [(p[0], p[1]) for p in A[0]]
+#     code_B = [(p[0], p[1]) for p in B[0]]
+#     code_D = [(p[0], p[1]) for p in D[0]]
     
-    return (code_A, code_B, code_D)    
+#     return (code_A, code_B, code_D)    
 #=====================================================================================================================================
 
 # def final(input_text):
@@ -210,6 +210,58 @@ def final(input_text):
 #     return A,B,D 
 
 #=====================================================================================================================================
+def final(input_text):
+
+    lemm = WordNetLemmatizer()
+    # spell = SpellChecker()
+    wordL = []
+    close_matches =[]
+    A = search_keywords(input_text)
+    # print("A:==>",A)
+
+    not_found_words = A[1]
+    for word in not_found_words:
+        wordlemmatized = lemm.lemmatize(word)
+        wordL.append(wordlemmatized)
+    wordL = ' '.join(wordL)
+    B = search_keywords(wordL)
+    # print("B:==>",B)
+
+    wordforCloseMatching = B[1]
+    # print("B(1)", B[1])
+    getCloseMatch = []
+    for i in wordforCloseMatching:
+        # print(i)
+        c = get_close_matches(i, product_df['keyword'], n=5)
+        print("c", c)
+        # temp=[]
+        # for i in c:
+        #     if i[0].lower()==c[i][0]:
+        #         temp.append(c[i])
+        first_letter = i[0].lower()
+        print("first_letter", first_letter)
+        matches = [match for match in c if match.lower().startswith(first_letter)]
+        print("matches", matches)
+        # print('temp value:',temp)
+        getCloseMatch.append(matches)
+        for items in getCloseMatch:
+            getCloseMatch = [items for items in getCloseMatch if items is not None]
+    # print("getCloseMatch",getCloseMatch)    
+    # getCloseMatch = ' '.join(getCloseMatch)
+    result = []
+    for l in getCloseMatch:
+        result += l
+    # print(result)
+    brahmastra = ' '.join(result)
+    # print("brahmastra", brahmastra)
+    D = search_keywords(brahmastra)
+
+    code_A = A[0]
+    code_B = B[0]
+    code_D = D[0]
+
+    return code_A + code_B + code_D
+
 
 st.title("search Segmentation")
 
