@@ -152,23 +152,12 @@ def final(input_text):
     B = search_keywords(wordL)
     wordforCloseMatching = B[1]
     getCloseMatch = []
-#     for i in wordforCloseMatching:
-#         c = get_close_matches(i, product_df['keyword'], n=2, cutoff=0.6)
-#         getCloseMatch.append(c)
-        c = get_close_matches(i, product_df['keyword'], n=2)
-#         print("c", c)
-        # temp=[]
-        # for i in c:
-        #     if i[0].lower()==c[i][0]:
-        #         temp.append(c[i])
-        first_letter = i[0].lower()
-#         print("first_letter", first_letter)
-        matches = [match for match in c if match.lower().startswith(first_letter)]
-#         print("matches", matches)
-        # print('temp value:',temp)
-        getCloseMatch.append(matches)
-        for items in getCloseMatch:
-            getCloseMatch = [items for items in getCloseMatch if items is not None]
+    c = get_close_matches(i, product_df['keyword'], n=2)
+    first_letter = i[0].lower()
+    matches = [match for match in c if match.lower().startswith(first_letter)]
+    getCloseMatch.append(matches)
+    for items in getCloseMatch:
+        getCloseMatch = [items for items in getCloseMatch if items is not None]
     result = []
     for l in getCloseMatch:
         result += l
