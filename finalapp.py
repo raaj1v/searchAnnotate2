@@ -18,7 +18,8 @@ procurement = pd.read_csv("procurementTerms.csv")
 product_df = pd.read_csv("Updated_keywordProductSynonym2.csv", encoding = "Windows-1252")
 product_df['synonymkeyword'] = product_df['synonymkeyword'].fillna('')
 company_df = pd.read_csv("Copy of company_list_with_abbr.csv")
-stop_words = pd.read_csv("stop_words.csv")
+# stop_words = pd.read_csv("stop_words.csv")
+stop_words = pd.read_csv("stopwords_updated.csv")['0'].tolist()
 
 #=====================================================================================================================================
 
