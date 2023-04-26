@@ -232,7 +232,7 @@ def final(input_text):
     getCloseMatch = []
     for i in wordforCloseMatching:
         # print(i)
-        c = get_close_matches(i, product_df['keyword'], n=2)
+        c = get_close_matches(i, product_df['keyword'], n=2, cutoff= 0.8)
         print("c", c)
         # temp=[]
         # for i in c:
