@@ -94,7 +94,7 @@ def search_keywords(input_text2):
     output_text = re.findall(r'[a-zA-Z]+', output_text)
     # remove stop words
     filtered_words = [word for word in output_text 
-                  if word.lower() not in stop_words['stopword'].str.lower().tolist() 
+                  if word.lower() not in stop_words 
                   and word.lower() not in location['Districts'].str.lower().tolist()
                   and word.lower() not in procurement['ProcurementTerms'].str.lower().tolist()
                   and word.lower() not in company_df['CompanyName'].str.lower().tolist()
