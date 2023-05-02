@@ -283,7 +283,7 @@ if st.button("Get Results"):
 # #     output_text = drop_prepositions(input_text)
 #     product_result = final(input_text)
 
-    st.write("Extracted Data: ", product_result = final(input_text))
+      st.write("Extracted Data: ", final(input_text))
 #     st.write("Locations: ", segmentation_result['locations'])
 #     st.write("Procurement Terms: ", segmentation_result['procurement Terms'])
 #     st.write("Company Name Matches: ", company_result)
