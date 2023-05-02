@@ -80,7 +80,6 @@ def match_company(input_text):
     return keyword_matches
 
 #=====================================================================================================================================
-
 def search_keywords(input_text2):
     words = input_text2.split()
     cleaned_words = []
@@ -89,17 +88,25 @@ def search_keywords(input_text2):
             break
         cleaned_words.append(words[i])
     output_text = ' '.join(cleaned_words)
+    print("output_text", output_text)
     # remove unwanted characters
     output_text = output_text.replace(",", " BRK").replace(".", " BRK")
     output_text = re.findall(r'[a-zA-Z]+', output_text)
     # remove stop words
-    filtered_words = [word.lower() for word in output_text 
+    filtered_words = [word for word in output_text 
                   if word.lower() not in stop_words 
                   and word.lower() not in location['Districts'].str.lower().tolist()
                   and word.lower() not in procurement['ProcurementTerms'].str.lower().tolist()
                   and word.lower() not in company_df['CompanyName'].str.lower().tolist()
                   and word.lower() not in company_df['Abbrevation'].str.lower().tolist()]
     # print("filtered_words", filtered_words)
+
+    for i in range(len(filtered_words)):
+        for j in range(len(shortCodes)):
+            if filtered_words[i].lower() == shortCodes['ShortName'][j].lower():
+                filtered_words[i] = shortCodes['Fullform'][j]
+                filtered_words
+                
     # initialize variables
     keyword_matches = []
     remaining_words = filtered_words
@@ -136,9 +143,7 @@ def search_keywords(input_text2):
                     wordNotFound.append(remaining_words.pop(0))
     # return keycodeids and corresponding phrases
     return keyword_matches, wordNotFound
-
-
- #=====================================================================================================================================
+#=====================================================================================================================================
 # def final(input_text):
 
 #     lemm = WordNetLemmatizer()
@@ -211,7 +216,9 @@ def search_keywords(input_text2):
 
 #=====================================================================================================================================
 def final(input_text):
-
+    # textSegmentation(input_text)
+    Comp= match_company(input_text)
+    textSegments = textSegmentation(input_text)
     lemm = WordNetLemmatizer()
     # spell = SpellChecker()
     wordL = []
@@ -232,7 +239,7 @@ def final(input_text):
     getCloseMatch = []
     for i in wordforCloseMatching:
         # print(i)
-        c = get_close_matches(i, product_df['keyword'], n=2, cutoff= 0.8)
+        c = get_close_matches(i, product_df['keyword'], n=5, cutoff=0.8)
         print("c", c)
         # temp=[]
         # for i in c:
@@ -260,7 +267,7 @@ def final(input_text):
     code_B = B[0]
     code_D = D[0]
 
-    return code_A + code_B + code_D
+    return code_A + code_B + code_D + Comp, textSegments
 
 
 st.title("search Segmentation")
@@ -270,9 +277,9 @@ input_text = st.text_input("Enter the search phrase:")
 
     
 if st.button("Get Results"):
-    # Call all three functions and display the results
-    segmentation_result = textSegmentation(input_text)
-    company_result = match_company(input_text)
+#     # Call all three functions and display the results
+#     segmentation_result = textSegmentation(input_text)
+#     company_result = match_company(input_text)
 #     product_result = search_keywords(input_text)
 #     output_text = drop_prepositions(input_text)
     product_result = final(input_text)
