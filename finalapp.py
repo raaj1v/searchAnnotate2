@@ -12,14 +12,14 @@ from nltk import WordNetLemmatizer
 uom = pd.read_csv("uom.csv")
 location = pd.read_csv("indianLocationList.csv", encoding="ISO-8859-1")
 # prepositions = pd.read_csv("prepositions_updated.csv")['prepositions'].tolist()
-prepositions = pd.read_csv("Place_preposition_Product.csv")['Preposition'].tolist()
+prepositions = pd.read_csv("prepositionsFinal.csv")['Preposition'].tolist()
 shortCodes = pd.read_csv("shortCodesProduct.csv")
-procurement = pd.read_csv("procurementTerms.csv")
+procurement = pd.read_csv("PT.csv")
 product_df = pd.read_csv("Updated_keywordProductSynonym2.csv", encoding = "Windows-1252")
 product_df['synonymkeyword'] = product_df['synonymkeyword'].fillna('')
 company_df = pd.read_csv("Copy of company_list_with_abbr.csv")
 # stop_words = pd.read_csv("stop_words.csv")
-stop_words = pd.read_csv("stopwords_updated.csv")['0'].tolist()
+stop_words = pd.read_csv("stopWordsFinal.csv")['0'].tolist()
 
 #=====================================================================================================================================
 
@@ -96,7 +96,7 @@ def search_keywords(input_text2):
     filtered_words = [word.lower() for word in output_text 
                   if word.lower() not in stop_words 
                   and word.lower() not in location['Districts'].str.lower().tolist()
-                  and word.lower() not in procurement['ProcurementTerms'].str.lower().tolist()
+                  and word.lower() not in procurement[0].str.lower().tolist()
                   and word.lower() not in company_df['CompanyName'].str.lower().tolist()
                   and word.lower() not in company_df['Abbrevation'].str.lower().tolist()]
     for i in range(len(filtered_words)):
