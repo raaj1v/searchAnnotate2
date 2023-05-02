@@ -214,11 +214,10 @@ def search_keywords(input_text2):
 #     D = search_keywords(brahmastra)
 #     return A,B,D 
 
-#=====================================================================================================================================
-def final(input_text):
+#=====================================================================================================================================def final(input_text):
     # textSegmentation(input_text)
-#     Comp= match_company(input_text)
-#     textSegments = textSegmentation(input_text)
+    Comp= match_company(input_text)
+    textSegments = textSegmentation(input_text)
     lemm = WordNetLemmatizer()
     # spell = SpellChecker()
     wordL = []
@@ -240,15 +239,15 @@ def final(input_text):
     for i in wordforCloseMatching:
         # print(i)
         c = get_close_matches(i, product_df['keyword'], n=5, cutoff=0.8)
-        print("c", c)
+        # print("c", c)
         # temp=[]
         # for i in c:
         #     if i[0].lower()==c[i][0]:
         #         temp.append(c[i])
         first_letter = i[0].lower()
-        print("first_letter", first_letter)
+        # print("first_letter", first_letter)
         matches = [match for match in c if match.lower().startswith(first_letter)]
-        print("matches", matches)
+        # print("matches", matches)
         # print('temp value:',temp)
         getCloseMatch.append(matches)
         for items in getCloseMatch:
@@ -267,7 +266,7 @@ def final(input_text):
     code_B = B[0]
     code_D = D[0]
 
-    return code_A + code_B + code_D
+    return code_A + code_B + code_D , Comp, textSegments
 
 
 st.title("search Segmentation")
@@ -277,15 +276,15 @@ input_text = st.text_input("Enter the search phrase:")
 
     
 if st.button("Get Results"):
-#     # Call all three functions and display the results
-    segmentation_result = textSegmentation(input_text)
-    company_result = match_company(input_text)
-#     product_result = search_keywords(input_text)
-#     output_text = drop_prepositions(input_text)
-    product_result = final(input_text)
+# #     # Call all three functions and display the results
+#     segmentation_result = textSegmentation(input_text)
+#     company_result = match_company(input_text)
+# #     product_result = search_keywords(input_text)
+# #     output_text = drop_prepositions(input_text)
+#     product_result = final(input_text)
 
-    st.write("Units: ", segmentation_result['units'])
-    st.write("Locations: ", segmentation_result['locations'])
-    st.write("Procurement Terms: ", segmentation_result['procurement Terms'])
-    st.write("Company Name Matches: ", company_result)
-    st.write("Product Name Matches: ", product_result)
+    st.write("Extracted Data: ", product_result = final(input_text))
+#     st.write("Locations: ", segmentation_result['locations'])
+#     st.write("Procurement Terms: ", segmentation_result['procurement Terms'])
+#     st.write("Company Name Matches: ", company_result)
+#     st.write("Product Name Matches: ", product_result)
