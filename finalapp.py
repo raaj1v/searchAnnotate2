@@ -96,7 +96,7 @@ def search_keywords(input_text2):
     filtered_words = [word.lower() for word in output_text 
                   if word.lower() not in stop_words 
                   and word.lower() not in location['Districts'].str.lower().tolist()
-                  and word.lower() not in procurement[0].str.lower().tolist()
+                  and word.lower() not in procurement["ProcurementTerms"].str.lower().tolist()
                   and word.lower() not in company_df['CompanyName'].str.lower().tolist()
                   and word.lower() not in company_df['Abbrevation'].str.lower().tolist()]
     for i in range(len(filtered_words)):
