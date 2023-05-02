@@ -217,8 +217,8 @@ def search_keywords(input_text2):
 #=====================================================================================================================================
 def final(input_text):
     # textSegmentation(input_text)
-    Comp= match_company(input_text)
-    textSegments = textSegmentation(input_text)
+#     Comp= match_company(input_text)
+#     textSegments = textSegmentation(input_text)
     lemm = WordNetLemmatizer()
     # spell = SpellChecker()
     wordL = []
@@ -267,7 +267,7 @@ def final(input_text):
     code_B = B[0]
     code_D = D[0]
 
-    return code_A + code_B + code_D + Comp, textSegments
+    return code_A + code_B + code_D
 
 
 st.title("search Segmentation")
@@ -278,8 +278,8 @@ input_text = st.text_input("Enter the search phrase:")
     
 if st.button("Get Results"):
 #     # Call all three functions and display the results
-#     segmentation_result = textSegmentation(input_text)
-#     company_result = match_company(input_text)
+    segmentation_result = textSegmentation(input_text)
+    company_result = match_company(input_text)
 #     product_result = search_keywords(input_text)
 #     output_text = drop_prepositions(input_text)
     product_result = final(input_text)
