@@ -98,7 +98,13 @@ def search_keywords(input_text2):
                   and word.lower() not in location['Districts'].str.lower().tolist()
                   and word.lower() not in procurement['ProcurementTerms'].str.lower().tolist()
                   and word.lower() not in company_df['CompanyName'].str.lower().tolist()
-                  and word.lower() not in company_df['Abbrevation'].str.lower().tolist()]
+                  and word.lower() not in company_df['Abbrevation'].str.lower().tolist()
+    for i in range(len(filtered_words)):
+        for j in range(len(shortCodes)):
+            if filtered_words[i].lower() == shortCodes['ShortName'][j].lower():
+                filtered_words[i] = shortCodes['Fullform'][j]
+                filtered_words
+
     # print("filtered_words", filtered_words)
     # initialize variables
     keyword_matches = []
