@@ -215,6 +215,7 @@ def search_keywords(input_text2):
 #     return A,B,D 
 
 #=====================================================================================================================================def final(input_text):
+ def final(input_text):
     # textSegmentation(input_text)
     Comp= match_company(input_text)
     textSegments = textSegmentation(input_text)
