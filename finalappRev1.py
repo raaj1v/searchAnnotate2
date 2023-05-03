@@ -545,7 +545,7 @@ user_input = st.text_input("Enter the search phrase:")
 
     
 if st.button("Get Results"):
-    st.write("Extracted Data", mainFunction(userInput))
+    st.write("Extracted Data", mainFunction(user_input))
 #     # Call all three functions and display the results
 #     segmentation_result = textSegmentation(input_text)
 #     company_result = match_company(input_text)
