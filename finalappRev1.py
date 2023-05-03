@@ -179,7 +179,7 @@ def final(input_text):
     getCloseMatch = []
 
     for i in wordforCloseMatching:
-        c = get_close_matches(i, product_df['keyword'], n=2, cutoff=0.)
+        c = get_close_matches(i, product_df['keyword'], n=2, cutoff=0.8)
         temp=[]
         for j in c:
             if j[0].lower()==i[0].lower():
