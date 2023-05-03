@@ -538,7 +538,7 @@ def mainFunction(userInput):
 
 #=====================================================================================================================================
 
-st.title("TIGER AI")
+st.title("Search / Classification")
 
 # # Get user input
 user_input = st.text_input("Enter the search phrase:")
