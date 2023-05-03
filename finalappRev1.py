@@ -538,13 +538,14 @@ def mainFunction(userInput):
 
 #=====================================================================================================================================
 
-# st.title("TIGER AI")
+st.title("TIGER AI")
 
 # # Get user input
-# input_text = st.text_input("Enter the search phrase:")
+user_input = st.text_input("Enter the search phrase:")
 
     
-# if st.button("Get Results"):
+if st.button("Get Results"):
+    st.write("Extracted Data", mainFunction(userInput))
 #     # Call all three functions and display the results
 #     segmentation_result = textSegmentation(input_text)
 #     company_result = match_company(input_text)
