@@ -34,11 +34,21 @@ def textSegmentation(input_text):
             units.add(word)
     result_dict['units'] = units
     
-    # extract locations from the cleaned text
+#     # extract locations from the cleaned text
+#     locations = set()
+#     for word in input_text:
+#         if any(location['Districts'].str.contains(fr"\b{word}\b", regex= True,case=False)):
+#             locations.add(word)
+#     result_dict['locations'] = locations
+    # Extract locations from the cleaned text
     locations = set()
-    for word in input_text:
-        if any(location['Districts'].str.contains(fr"\b{word}\b", regex= True,case=False)):
-            locations.add(word)
+    phraseLocation = ' '.join(input_text)
+
+    # Find matching location(s)
+    matching_locations = location[location['Districts'].str.lower() == phraseLocation.lower()]['Districts']
+
+    # Add the matching location(s) to the locations set
+    locations.update(matching_locations)
     result_dict['locations'] = locations
 
     procurementTerm = set()
