@@ -274,7 +274,14 @@ def search_keywords(input_text2):
     cleaned_words = [word for word in words if word.lower() not in prepositions]
 
     output_text = ' '.join(cleaned_words).replace(",", " BRK").replace(".", " BRK")
-    output_text = word_pattern.findall(output_text)
+    
+    try:
+        output_text = word_pattern.findall(output_text)
+    except Exception as e:
+        print(f"Error in search_keywords: {e}")
+        print("input_text2:", input_text2)
+        print("output_text:", output_text)
+        traceback.print_exc()
 
     filtered_words = [word for word in output_text 
                       if word.lower() not in stop_words 
