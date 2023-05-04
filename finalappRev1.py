@@ -530,7 +530,7 @@ def splitFunction(userInput):
 def mainFunction(userInput):
     Resultset = []
     F= splitFunction(userInput)
-    forlocation = F[1]
+    forlocation = ' '.join(F[1])
     location = textSegmentation(forlocation)
     Q = ' '.join(F[2])
     # for i in F[2]:
