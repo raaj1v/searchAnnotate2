@@ -258,10 +258,16 @@ class Trie:
 # Build tries for each column
 product_name_trie, keyword_trie, synonym_trie = Trie(), Trie(), Trie()
 
+
 for index, row in product_df.iterrows():
-    product_name_trie.insert(row['ProductName'].lower(), row['ProductCode'])
-    keyword_trie.insert(row['keyword'].lower(), row['keycodeid'])
-    synonym_trie.insert(row['synonymkeyword'].lower(), row['synonymId'])
+    try:
+        product_name_trie.insert(row['ProductName'].lower(), row['ProductCode'])
+        keyword_trie.insert(row['keyword'].lower(), row['keycodeid'])
+        synonym_trie.insert(row['synonymkeyword'].lower(), row['synonymId'])
+    except Exception as e:
+        print(f"Error at index {index}: {e}")
+        print(row)
+
 
 def search_keywords(input_text2):
     words = input_text2.split()
