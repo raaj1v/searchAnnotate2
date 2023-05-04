@@ -484,6 +484,7 @@ def newFunModify(s):
 #=====================================================================================================================================
 def splitFunction(userInput):
     appendedResult = []
+    sharedChunks=[]
     result = re.split(r'\.(?![^\(\)]*\))', userInput)
     # print('result:', result)
     for i in result:
@@ -499,19 +500,21 @@ def splitFunction(userInput):
                 # print('spiltData:->',spiltData)
                 for m in spiltData[0]:
                     # print('finding the Product inside the Chunks:',m)
+                    sharedChunks.append(m)
                     ram=newFunModify(m)
                     # print('Suggestion:',ram)
                     appendedResult.append(ram)
-    return appendedResult, spiltData[1]
+    return appendedResult, spiltData[1],sharedChunks
 #=====================================================================================================================================
 
 def mainFunction(userInput):
     Resultset = []
     F= splitFunction(userInput)
-    for i in F[0]:
-        Q = ' '.join(i)
-        test  = final(Q)
-        Resultset.append(test)
+    Q = ' '.join(F[2])
+    # for i in F[2]:
+        # Q = ' '.join(i)
+    test  = final(Q)
+    Resultset.append(test)
     return Resultset
 #=====================================================================================================================================
 
