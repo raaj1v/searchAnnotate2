@@ -33,22 +33,17 @@ def textSegmentation(input_text):
         if any(uom['units'].str.contains(fr"\b{word}\b", case=False, regex=True)):
             units.add(word)
     result_dict['units'] = units
-    
-#     # extract locations from the cleaned text
-#     locations = set()
-#     for word in input_text:
-#         if any(location['Districts'].str.contains(fr"\b{word}\b", regex= True,case=False)):
-#             locations.add(word)
-#     result_dict['locations'] = locations
-    # Extract locations from the cleaned text
+   
     locations = set()
-    phraseLocation = ' '.join(input_text)
 
-    # Find matching location(s)
-    matching_locations = location[location['Districts'].str.lower() == phraseLocation.lower()]['Districts']
+    # Check for each word in the input text
+    for word in input_text:
+        # Find matching location(s)
+        matching_locations = location[location['Districts'].str.lower() == word.lower()]['Districts']
 
-    # Add the matching location(s) to the locations set
-    locations.update(matching_locations)
+        # Add the matching location(s) to the locations set
+        locations.update(matching_locations)
+
     result_dict['locations'] = locations
 
     procurementTerm = set()
