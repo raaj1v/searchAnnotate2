@@ -512,27 +512,26 @@ def splitFunction(userInput):
     return appendedResult, spiltData[1],sharedChunks
 #=====================================================================================================================================
 
-def mainFunction(userInput):
-    Resultset = []
-    F= splitFunction(userInput)
-    Q = ' '.join(F[2])
-    # for i in F[2]:
-        # Q = ' '.join(i)
-    test  = final(Q)
-    Resultset.append(test)
-    return Resultset
-
 # def mainFunction(userInput):
 #     Resultset = []
 #     F= splitFunction(userInput)
-#     forlocation = ' '.join(F[1])
-#     location = textSegmentation(forlocation)
 #     Q = ' '.join(F[2])
 #     # for i in F[2]:
 #         # Q = ' '.join(i)
 #     test  = final(Q)
 #     Resultset.append(test)
-#     return Resultset, location
+#     return Resultset
+def mainFunction(userInput):
+    Resultset = []
+    F= splitFunction(userInput)
+    forlocation = ' '.join(F[1])
+    location = textSegmentation(forlocation)
+    Q = ' '.join(F[2])
+    # for i in F[2]:
+        # Q = ' '.join(i)
+    test  = final(Q)
+    Resultset.append(test)
+    return Resultset, location
 #=====================================================================================================================================
 
 
