@@ -594,7 +594,7 @@ def mainFunction(userInput):
         # Q = ' '.join(i)
     test  = final(Q)
     Resultset.append(test)
-    return Resultset, location
+    return Resultset, location,F
     
     
     
