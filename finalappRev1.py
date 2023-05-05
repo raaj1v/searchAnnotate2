@@ -387,30 +387,33 @@ def perfectChunks(listData):
     finalChunks = []
     location=[]
     listData=listData.split()
-    print('listData:',listData)
-    firstCheck = listData[0].lower()
-    pattern = '(^:)'
-    secondCheck = re.match(pattern, listData[0])
-    if firstCheck not in toLowerCasePropoUpdate or secondCheck:
-        ff = ' '.join(listData)
-        print( 'ff:',ff)
-        finalChunks.append(ff)
-    else:
-        bb = ' '.join(listData)
-        print( 'bb:',bb)
-        location.append(bb)
-#     for data in listData:
-#         print('data:',data)
-#         pattern = '(^:)'
-#         firstCheck = data[0].lower()
-#         print('First Data:',firstCheck)
-#         secondCheck = re.match(pattern, data)
-#         if firstCheck in toLowerCasePropoUpdate or secondCheck:
-#             ff = ' '.join(listData)
-#             print( 'ff:',ff)
-#         finalChunks.append(ff)
-    
-    return finalChunks, location
+    # print('listData:',listData)
+    try:
+        firstCheck = listData[0].lower()
+        pattern = '(^:)'
+        secondCheck = re.match(pattern, listData[0])
+        if firstCheck not in toLowerCasePropoUpdate or secondCheck:
+            ff = ' '.join(listData)
+            # print( 'ff:',ff)
+            finalChunks.append(ff)
+        else:
+            bb = ' '.join(listData)
+            # print( 'bb:',bb)
+            location.append(bb)
+    #     for data in listData:
+    #         print('data:',data)
+    #         pattern = '(^:)'
+    #         firstCheck = data[0].lower()
+    #         print('First Data:',firstCheck)
+    #         secondCheck = re.match(pattern, data)
+    #         if firstCheck in toLowerCasePropoUpdate or secondCheck:
+    #             ff = ' '.join(listData)
+    #             print( 'ff:',ff)
+    #         finalChunks.append(ff)
+        
+        return finalChunks, location
+    except:
+        pass
 #=====================================================================================================================================
 def newFunModify(s):
     print('Sentence :',s)
