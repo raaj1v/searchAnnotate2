@@ -595,12 +595,18 @@ def mainFunction(userInput):
     F= splitFunction(userInput)
     forlocation = ' '.join(F[1])
     location = textSegmentation(forlocation)
-    Q = ' '.join(F[2])
-    # for i in F[2]:
-        # Q = ' '.join(i)
-    test  = final(Q)
-    Resultset.append(test)
+    for strings in F[2]:
+        strSearchRes= final(F[2])
+        Resultset.append(strSearchRes)
     return Resultset, location
+    
+    
+#     Q = ' '.join(F[2])
+#     # for i in F[2]:
+#         # Q = ' '.join(i)
+#     test  = final(Q)
+# #     Resultset.append(test)
+    
 #=====================================================================================================================================
 
 
