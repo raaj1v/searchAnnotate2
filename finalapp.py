@@ -80,68 +80,103 @@ def match_company(input_text):
     return keyword_matches
 
 #=====================================================================================================================================
+import re
 
 def search_keywords(input_text2):
     words = input_text2.split()
-    cleaned_words = []
-    for i in range(len(words)):
-        if words[i].lower() in prepositions:
-            break
-        cleaned_words.append(words[i])
+    cleaned_words = [word for word in words if word.lower() not in prepositions]
     output_text = ' '.join(cleaned_words)
-    # remove unwanted characters
     output_text = output_text.replace(",", " BRK").replace(".", " BRK")
     output_text = re.findall(r'[a-zA-Z]+', output_text)
-    # remove stop words
-    filtered_words = [word.lower() for word in output_text 
-                  if word.lower() not in stop_words 
-                  and word.lower() not in location['Districts'].str.lower().tolist()
-                  and word.lower() not in procurement["ProcurementTerms"].str.lower().tolist()
-                  and word.lower() not in company_df['CompanyName'].str.lower().tolist()
-                  and word.lower() not in company_df['Abbrevation'].str.lower().tolist()]
-    for i in range(len(filtered_words)):
-        for j in range(len(shortCodes)):
-            if filtered_words[i].lower() == shortCodes['ShortName'][j].lower():
-                filtered_words[i] = shortCodes['Fullform'][j]
-                filtered_words
+    filtered_words = [word for word in output_text
+                      if word.lower() not in stop_words
+                      and word.lower() not in location['Districts'].str.lower().tolist()
+                      and word.lower() not in procurement['ProcurementTerms'].str.lower().tolist()
+                      and word.lower() not in company_df['CompanyName'].str.lower().tolist()
+                      and word.lower() not in company_df['Abbrevation'].str.lower().tolist()]
 
-    # print("filtered_words", filtered_words)
-    # initialize variables
-    keyword_matches = []
-    remaining_words = filtered_words
-    wordNotFound=[]
-    # search for longest possible matching word strings in keyword column
-    while len(remaining_words) > 0:
-        for i in range(len(remaining_words), 0, -1):
-            phrase = ' '.join(remaining_words[:i])
-            matches = product_df[product_df['keyword'].str.lower() == phrase.lower()]
-            if len(matches) > 0:
-                keyword_matches.append((matches.iloc[0]['keycodeid'], phrase))
-                remaining_words = remaining_words[i:]
-                break
-        else:
-            # no match found in keyword column, try synonym column
-            for i in range(len(remaining_words), 0, -1):
-                phrase = ' '.join(remaining_words[:i])
-                matches = product_df[product_df['synonymkeyword'].str.lower()==phrase.lower()]
-                if len(matches) > 0:
-                    keyword_matches.append((matches.iloc[0]['synonymId'], phrase))
-                    remaining_words = remaining_words[i:]
-                    break
-            else:
-                # no match found in synonym column, try productname column
-                for i in range(len(remaining_words), 0, -1):
-                    phrase = ' '.join(remaining_words[:i])
-                    matches = product_df[product_df['ProductName'].str.lower()==phrase.lower()]
-                    if len(matches) > 0:
-                        keyword_matches.append((matches.iloc[0]['ProductCode'], phrase))
-                        remaining_words = remaining_words[i:]
-                        break
-                else:
-                    # no match found in any column
-                    wordNotFound.append(remaining_words.pop(0))
-    # return keycodeids and corresponding phrases
-    return keyword_matches, wordNotFound
+    filtered_words = [shortCodes.loc[shortCodes['ShortName'].str.lower() == word.lower(), 'Fullform'].iloc[0]
+                      if any(shortCodes['ShortName'].str.lower() == word.lower()) else word for word in filtered_words]
+
+    pattern = re.compile(r'\b(?:' + '|'.join(map(re.escape, filtered_words)) + r')\b', re.IGNORECASE)
+    found_phrases = pattern.findall(' '.join(filtered_words))
+
+    ExtractedMatches = {
+        'product_matches': [(match.iloc[0]['ProductCode'], phrase) for phrase in found_phrases for match in
+                            [product_df.loc[product_df['ProductName'].str.lower() == phrase.lower()]] if not match.empty],
+        'keyword_matches': [(match.iloc[0]['keycodeid'], phrase) for phrase in found_phrases for match in
+                            [product_df.loc[product_df['keyword'].str.lower() == phrase.lower()]] if not match.empty],
+        'synonym_matches': [(match.iloc[0]['synonymId'], phrase) for phrase in found_phrases for match in
+                            [product_df.loc[product_df['synonymkeyword'].str.lower() == phrase.lower()]] if not match.empty]
+    }
+
+    not_found_words = [word for word in filtered_words if not any(
+        [phrase == word for _, phrase in ExtractedMatches['product_matches'] + ExtractedMatches['keyword_matches'] +
+         ExtractedMatches['synonym_matches']])]
+
+    return ExtractedMatches, not_found_words
+
+# def search_keywords(input_text2):
+#     words = input_text2.split()
+#     cleaned_words = []
+#     for i in range(len(words)):
+#         if words[i].lower() in prepositions:
+#             break
+#         cleaned_words.append(words[i])
+#     output_text = ' '.join(cleaned_words)
+#     # remove unwanted characters
+#     output_text = output_text.replace(",", " BRK").replace(".", " BRK")
+#     output_text = re.findall(r'[a-zA-Z]+', output_text)
+#     # remove stop words
+#     filtered_words = [word.lower() for word in output_text 
+#                   if word.lower() not in stop_words 
+#                   and word.lower() not in location['Districts'].str.lower().tolist()
+#                   and word.lower() not in procurement["ProcurementTerms"].str.lower().tolist()
+#                   and word.lower() not in company_df['CompanyName'].str.lower().tolist()
+#                   and word.lower() not in company_df['Abbrevation'].str.lower().tolist()]
+#     for i in range(len(filtered_words)):
+#         for j in range(len(shortCodes)):
+#             if filtered_words[i].lower() == shortCodes['ShortName'][j].lower():
+#                 filtered_words[i] = shortCodes['Fullform'][j]
+#                 filtered_words
+
+#     # print("filtered_words", filtered_words)
+#     # initialize variables
+#     keyword_matches = []
+#     remaining_words = filtered_words
+#     wordNotFound=[]
+#     # search for longest possible matching word strings in keyword column
+#     while len(remaining_words) > 0:
+#         for i in range(len(remaining_words), 0, -1):
+#             phrase = ' '.join(remaining_words[:i])
+#             matches = product_df[product_df['keyword'].str.lower() == phrase.lower()]
+#             if len(matches) > 0:
+#                 keyword_matches.append((matches.iloc[0]['keycodeid'], phrase))
+#                 remaining_words = remaining_words[i:]
+#                 break
+#         else:
+#             # no match found in keyword column, try synonym column
+#             for i in range(len(remaining_words), 0, -1):
+#                 phrase = ' '.join(remaining_words[:i])
+#                 matches = product_df[product_df['synonymkeyword'].str.lower()==phrase.lower()]
+#                 if len(matches) > 0:
+#                     keyword_matches.append((matches.iloc[0]['synonymId'], phrase))
+#                     remaining_words = remaining_words[i:]
+#                     break
+#             else:
+#                 # no match found in synonym column, try productname column
+#                 for i in range(len(remaining_words), 0, -1):
+#                     phrase = ' '.join(remaining_words[:i])
+#                     matches = product_df[product_df['ProductName'].str.lower()==phrase.lower()]
+#                     if len(matches) > 0:
+#                         keyword_matches.append((matches.iloc[0]['ProductCode'], phrase))
+#                         remaining_words = remaining_words[i:]
+#                         break
+#                 else:
+#                     # no match found in any column
+#                     wordNotFound.append(remaining_words.pop(0))
+#     # return keycodeids and corresponding phrases
+#     return keyword_matches, wordNotFound
 
 
  #=====================================================================================================================================
