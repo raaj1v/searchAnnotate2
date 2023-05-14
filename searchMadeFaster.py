@@ -157,6 +157,7 @@ def final(input_text):
     searchResult= search_keywords33(input_text)
     Comp= match_company(input_text)
     textSegments = textSegmentation(input_text)
+    return textSegments, Comp, searchResult
 #     lemm = WordNetLemmatizer()
 #     wordL = []
 #     close_matches =[]
@@ -190,7 +191,7 @@ def final(input_text):
 #     code_D = D[0]
 
 #     return code_A, code_B, code_D , Comp, textSegments
-      return textSegments, Comp, searchResult
+   
 st.title("Search / Classification")
 
 # # Get user input
