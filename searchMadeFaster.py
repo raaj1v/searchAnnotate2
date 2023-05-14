@@ -114,46 +114,83 @@ def search_keywords33(input_text2):
         [phrase == word for _, phrase in ExtractedMatches['product_matches'] + ExtractedMatches['keyword_matches'] +
          ExtractedMatches['synonym_matches']])]))
 
-    return ExtractedMatches, not_found_words
+    return ExtractedMatches #, not_found_words
 #=========================================================================================================================
 
+# def final(input_text):
+#     Comp= match_company(input_text)
+#     textSegments = textSegmentation(input_text)
+#     lemm = WordNetLemmatizer()
+#     wordL = []
+#     close_matches =[]
+#     A = search_keywords33(input_text)
+#     not_found_words = A[1]
+#     for word in not_found_words:
+#         wordlemmatized = lemm.lemmatize(word)
+#         wordL.append(wordlemmatized)
+#     wordL = ' '.join(wordL)
+#     B = search_keywords33(wordL)
+#     wordforCloseMatching = B[1]
+#     getCloseMatch = []
+#     for i in wordforCloseMatching:
+#         c = get_close_matches(i, product_df['keyword'], n=2, cutoff=0.8)
+#         temp=[]
+#         for j in c:
+#             if j[0].lower()==i[0].lower():
+#                 temp.append(j)
+#         print('temp value:',temp)
+#         getCloseMatch.append(temp)
+#         for index in getCloseMatch:
+#             getCloseMatch = [index for index in getCloseMatch if index is not None]
+#     result = []
+#     for l in getCloseMatch:
+#         result += l
+#     brahmastra = ' '.join(result)
+#     D = search_keywords33(brahmastra)
+
+#     code_A = A[0]
+#     code_B = B[0]
+#     code_D = D[0]
+
+#     return code_A, code_B, code_D , Comp, textSegments
 def final(input_text):
+    searchResult= search_keywords33(input_text)
     Comp= match_company(input_text)
     textSegments = textSegmentation(input_text)
-    lemm = WordNetLemmatizer()
-    wordL = []
-    close_matches =[]
-    A = search_keywords33(input_text)
-    not_found_words = A[1]
-    for word in not_found_words:
-        wordlemmatized = lemm.lemmatize(word)
-        wordL.append(wordlemmatized)
-    wordL = ' '.join(wordL)
-    B = search_keywords33(wordL)
-    wordforCloseMatching = B[1]
-    getCloseMatch = []
-    for i in wordforCloseMatching:
-        c = get_close_matches(i, product_df['keyword'], n=2, cutoff=0.8)
-        temp=[]
-        for j in c:
-            if j[0].lower()==i[0].lower():
-                temp.append(j)
-        print('temp value:',temp)
-        getCloseMatch.append(temp)
-        for index in getCloseMatch:
-            getCloseMatch = [index for index in getCloseMatch if index is not None]
-    result = []
-    for l in getCloseMatch:
-        result += l
-    brahmastra = ' '.join(result)
-    D = search_keywords33(brahmastra)
+#     lemm = WordNetLemmatizer()
+#     wordL = []
+#     close_matches =[]
+#     A = search_keywords33(input_text)
+#     not_found_words = A[1]
+#     for word in not_found_words:
+#         wordlemmatized = lemm.lemmatize(word)
+#         wordL.append(wordlemmatized)
+#     wordL = ' '.join(wordL)
+#     B = search_keywords33(wordL)
+#     wordforCloseMatching = B[1]
+#     getCloseMatch = []
+#     for i in wordforCloseMatching:
+#         c = get_close_matches(i, product_df['keyword'], n=2, cutoff=0.8)
+#         temp=[]
+#         for j in c:
+#             if j[0].lower()==i[0].lower():
+#                 temp.append(j)
+#         print('temp value:',temp)
+#         getCloseMatch.append(temp)
+#         for index in getCloseMatch:
+#             getCloseMatch = [index for index in getCloseMatch if index is not None]
+#     result = []
+#     for l in getCloseMatch:
+#         result += l
+#     brahmastra = ' '.join(result)
+#     D = search_keywords33(brahmastra)
 
-    code_A = A[0]
-    code_B = B[0]
-    code_D = D[0]
+#     code_A = A[0]
+#     code_B = B[0]
+#     code_D = D[0]
 
-    return code_A, code_B, code_D , Comp, textSegments
-
+#     return code_A, code_B, code_D , Comp, textSegments
+      return textSegments, Comp, searchResult
 st.title("Search / Classification")
 
 # # Get user input
